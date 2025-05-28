@@ -1,10 +1,13 @@
-from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
+import os
+from dotenv import load_dotenv
+from sqlmodel import create_engine, Session
 
-uri = "mongodb+srv://FastApi:abc%40123@aayush.0ykxxqv.mongodb.net/?retryWrites=true&w=majority&appName=aayush"
+load_dotenv()
 
-# Create a new client and connect to the server
-client = MongoClient(uri, server_api=ServerApi('1'))
+DATABASE_URL = os.getenv("DATABASE_URL")
 
-db = client.todo_db
-collection = db["todo_data"]
+engine = create_engine(DATABASE_URL, echo=True)
+
+def get_session():
+    with Session(engine) as session:
+        yield session

@@ -1,7 +1,9 @@
-from pydantic import BaseModel
+from sqlmodel import SQLModel, Field
+from typing import Optional
 from datetime import datetime
 
-class Todo(BaseModel):
+class Todo(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
     title: str
     description: str
     is_completed: bool = False
