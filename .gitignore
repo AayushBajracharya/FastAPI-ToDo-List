@@ -1,5 +1,5 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
+docs: add project instructions to README and ignore __pycache__ in .gitignore
 *.py[cod]
 *$py.class
 
