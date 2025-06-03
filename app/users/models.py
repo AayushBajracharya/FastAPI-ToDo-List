@@ -8,3 +8,4 @@ class UserBase(SQLModel, table=True):
     password: str = Field(min_length=8)
     updatedAt: Optional[datetime] = Field(default_factory=datetime.now)
     createdAt: datetime = Field(default_factory=datetime.now)
+    

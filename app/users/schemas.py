@@ -16,3 +16,4 @@ class UserResponse(BaseModel):
     username: str
     createdAt: datetime
     updatedAt: Optional[datetime]
+    
