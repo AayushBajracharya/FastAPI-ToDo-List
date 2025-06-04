@@ -1,10 +1,10 @@
 from datetime import datetime, timedelta
-from http.client import HTTPException
 from typing import Any
 from jose import jwt
 import bcrypt
 import os
 from dotenv import load_dotenv
+from fastapi import HTTPException
 
 load_dotenv()
 
