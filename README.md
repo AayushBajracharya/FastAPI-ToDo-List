@@ -1,4 +1,4 @@
-Todo Application
+# Todo Application
 This is a FastAPI-based Todo application that allows users to manage tasks with a PostgreSQL database backend. It uses SQLModel for ORM and supports CRUD operations for todos.
 
 Prerequisites
