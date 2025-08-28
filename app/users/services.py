@@ -17,4 +17,4 @@ class UserService:
                 detail="User not found"
             )
         return user
-    
+     
